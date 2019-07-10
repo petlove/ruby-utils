@@ -1,4 +1,19 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in ruby-utils.gemspec
+source 'https://rubygems.org'
+
+group :development, :test do
+  gem 'dotenv'
+  gem 'pry'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-console'
+  gem 'simplecov-summary'
+end
+
 gemspec
