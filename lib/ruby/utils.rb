@@ -5,8 +5,8 @@ require 'ruby/utils/version'
 module Ruby
   module Utils
     def dig(hash, keys, default = nil)
-      result = hash[keys.shift]
-      keys.any? ? dig(result, keys, default) : result
+      result = hash[keys[0]] if keys[0]
+      keys[1..-1].any? ? dig(result, keys[1..-1], default) : result || default
     rescue StandardError
       default
     end
