@@ -23,7 +23,7 @@ include Ruby::Utils
 ### Dig
 
 ```ruby
-# dig(hash, keys, default value = nil)
+# dig(hash, keys, default = nil)
 
 dig({ a: { b: 'c' } }, %i(a b))
 # => 'c'
@@ -36,7 +36,7 @@ dig({ a: { b: 'c' } }, %i(a b c), {})
 ### Hash compact
 
 ```ruby
-# hash_compact(hash, keys, default value = nil)
+# hash_compact(hash)
 
 hash_compact({ a: 'a', b: nil })
 # => { a: 'a' }
