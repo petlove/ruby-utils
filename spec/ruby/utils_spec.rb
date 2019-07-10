@@ -53,4 +53,19 @@ RSpec.describe Ruby::Utils, type: :module do
       is_expected.to eq(a: 'a')
     end
   end
+
+  describe '#slice' do
+    class SliceSpec
+      include Ruby::Utils
+    end
+
+    let(:hash) { { a: 'a', b: 'b' } }
+    let(:keys) { %i[a] }
+
+    subject { SliceSpec.new.slice(hash, keys) }
+
+    it 'should select the keys' do
+      is_expected.to eq(a: 'a')
+    end
+  end
 end

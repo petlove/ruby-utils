@@ -14,5 +14,9 @@ module Ruby
     def hash_compact(hash)
       hash.reject { |_k, v| v.nil? }
     end
+
+    def slice(hash, keys)
+      hash.select { |k, _v| keys.include?(k) }
+    end
   end
 end

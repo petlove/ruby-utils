@@ -17,7 +17,7 @@ gem 'ruby-utils', github: 'petlove/ruby-utils'
 
 Include this code in your class:
 ```ruby
-require 'ruby-utils'
+require 'ruby/utils'
 include Ruby::Utils
 ```
 ### Dig
@@ -37,6 +37,15 @@ dig({ a: { b: 'c' } }, %i(a b c), {})
 
 ```ruby
 # hash_compact(hash)
+
+hash_compact({ a: 'a', b: nil })
+# => { a: 'a' }
+```
+
+### Slice
+
+```ruby
+# slice(hash, fields)
 
 hash_compact({ a: 'a', b: nil })
 # => { a: 'a' }
