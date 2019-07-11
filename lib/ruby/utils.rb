@@ -11,7 +11,7 @@ module Ruby
       default
     end
 
-    def hash_compact(hash)
+    def compact(hash)
       hash.reject { |_k, v| v.nil? }
     end
 

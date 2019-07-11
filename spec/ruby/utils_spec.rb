@@ -42,12 +42,12 @@ RSpec.describe Ruby::Utils, type: :module do
     end
   end
 
-  describe '#hash_compact' do
-    class HashCompactSpec
+  describe '#compact' do
+    class CompactSpec
       include Ruby::Utils
     end
 
-    subject { HashCompactSpec.new.hash_compact(a: 'a', b: nil) }
+    subject { CompactSpec.new.compact(a: 'a', b: nil) }
 
     it 'should remove nil values' do
       is_expected.to eq(a: 'a')
