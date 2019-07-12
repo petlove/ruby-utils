@@ -33,12 +33,12 @@ dig({ a: { b: 'c' } }, %i(a b c), {})
 # => {}
 ```
 
-### Hash compact
+### Compact
 
 ```ruby
-# hash_compact(hash)
+# compact(hash)
 
-hash_compact({ a: 'a', b: nil })
+compact({ a: 'a', b: nil })
 # => { a: 'a' }
 ```
 

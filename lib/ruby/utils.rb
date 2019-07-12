@@ -11,7 +11,7 @@ module Ruby
     end
 
     def compact(hash)
-      hash.reject { |_k, v| v.nil? }
+      hash.select { |_k, v| v }
     end
 
     def slice(hash, keys)
